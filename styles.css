@@ -9,6 +9,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 217, 147);
+    opacity: 0;
+    animation: aparecer 0.5s ease-in forwards;
+}
+
+@keyframes aparecer {
+     to {
+        opacity: 1;
+        transform: translateY(20px);
+        transform: translateY(0);
+     }
 }
 
 header {
