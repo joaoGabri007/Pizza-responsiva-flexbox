@@ -1,25 +1,35 @@
 @charset "UTF-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
+
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255, 217, 147);
+
     opacity: 0;
     animation: aparecer 0.5s ease-in forwards;
 }
 
+
 @keyframes aparecer {
-     to {
+
+    to {
         opacity: 1;
-        transform: translateY(20px);
         transform: translateY(0);
-     }
+    }
+
 }
+
+
+/* CABEÇALHO */
 
 header {
     text-align: center;
@@ -27,63 +37,167 @@ header {
     cursor: pointer;
 }
 
+
 h1 {
     font-family: 'Dancing Script', cursive;
+
     color: rgb(255, 217, 147);
+
     font-size: 70px;
+
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.555);
 }
+
 
 h2 {
     color: rgb(0, 44, 0);
 }
 
-ins {
-    color: rgb(255, 72, 0);
-    cursor: pointer;
-} 
- 
+
 h3 {
     color: rgb(255, 72, 0);
 }
 
-.gesmini {
-   color: rgb(18, 63, 0);
-   letter-spacing: 2px;
-   text-indent: 30px;
-   line-height: 1.6; 
-   margin-left: 10px;
-   margin-right: 10px;
+
+/* TEXTOS */
+
+ins {
+    color: rgb(255, 72, 0);
+    cursor: pointer;
 }
 
-p {
-   letter-spacing: 2px;
-   text-indent: 10px;
-   line-height: 1.6;
-   margin-left: 5px;
+
+.gesmini {
+    color: rgb(18, 63, 0);
+
+    letter-spacing: 2px;
+    text-indent: 30px;
+    line-height: 1.6;
+
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
+
+p {
+    letter-spacing: 2px;
+    text-indent: 10px;
+    line-height: 1.6;
+
+    margin-left: 5px;
+}
+
 
 .orion {
     margin-left: 3px;
+
     color: rgb(18, 63, 0);
 }
 
+
+/* IMAGENS */
+
 img {
     border-radius: 20px;
+
     width: 350px;
     height: 200px;
+
     display: block;
+
     margin: auto;
+
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
+
+
+/* E-MAIL */
 
 .zabra {
     color: white;
 }
 
+
+/* RODAPÉ */
+
 footer {
     text-align: center;
+
     background-color: black;
+
     color: white;
+
     cursor: pointer;
+}
+
+
+/* ================================================= */
+/*                    FLEXBOX                       */
+/* ================================================= */
+
+@media screen and (min-width: 992px) {
+
+    .over,
+    .oper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 50px;
+        padding: 50px 30px;
+    }
+
+
+    /* 
+       OVER
+       
+       Nome + imagem à ESQUERDA
+       Texto à DIREITA
+    */
+
+    .over {
+        flex-direction: row-reverse;
+    }
+
+
+    /*
+       OPER
+
+       Texto à ESQUERDA
+       Nome + imagem à DIREITA
+    */
+
+    .oper {
+        flex-direction: row;
+    }
+
+
+    .zaq,
+    .pizza {
+        flex: 1;
+    }
+
+
+    .pizza {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    .zaq {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+    .pizza h3 {
+        margin-bottom: 20px;
+    }
+
+
+    .pizza img {
+        margin: auto;
+    }
+
 }
